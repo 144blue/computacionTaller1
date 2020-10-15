@@ -79,8 +79,6 @@ class InstitutionTest {
 	public void editInstitution() {
 	
 		
-		
-		
 		try {
 			instServiceImp.saveInstitution(inst);
 			

@@ -101,9 +101,10 @@ class TypeOfSpaceTest {
 		Optional<Physicalspacetype> tsP= Optional.of(pSpace);		
 		when(trepo.findById(pSpace.getPhyspctypeId())).thenReturn(tsP);
 		
+		pSpace.setPhyspctypeName("edited");
 		
 		try {
-			tser.editpPhysicalspacetype(pSpace);
+			tser.editpPhysicalspacetype(pSpace);			
 		
 		}catch (Exception e) {
 			
@@ -119,7 +120,7 @@ class TypeOfSpaceTest {
 		
 		Optional<Physicalspacetype> tsP= Optional.of(pSpace);		
 		when(trepo.findById(pSpace.getPhyspctypeId())).thenReturn(tsP);
-		
+		pSpace.setPhyspctypeName("edited");
 		
 		try {
 			tser.editpPhysicalspacetype(pSpace);
@@ -138,13 +139,12 @@ class TypeOfSpaceTest {
 		
 		Optional<Physicalspacetype> tsP= Optional.of(pSpace);		
 		//when(trepo.findById(pSpace.getPhyspctypeId())).thenReturn(tsP);
-		
+		pSpace.setPhyspctypeName("edited");
 		
 		try {
 			tser.editpPhysicalspacetype(pSpace);
 		
 		}catch (Exception e) {
-			System.out.println("enter");
 			assertTrue(true);
 		}	
 	}

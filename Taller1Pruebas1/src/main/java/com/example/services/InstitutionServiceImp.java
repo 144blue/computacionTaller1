@@ -47,13 +47,14 @@ public class InstitutionServiceImp implements InstitutionService{
 		Exception f= new ServiceImpException();
 		Optional<Institution> antigua= insrepo.findById(ins.getInstId());
 		String prefix="https://";
-		
+		Institution instii;
 		
 			if (antigua!=null) {
 				if(ins.getInstName()!=null & ins.getInstAcademicserverurl().startsWith(prefix) & ins.getInstAcadextradataurl().startsWith(prefix) & ins.getInstAcadloginurl().startsWith(prefix)
 						& ins.getInstAcadpersoninfodocurl().startsWith(prefix) & ins.getInstAcadpersoninfoidurl().startsWith(prefix)& ins.getInstAcadphysicalspacesurl().startsWith(prefix)
 						& ins.getInstAcadphysicalspacesurl().startsWith(prefix)) {
-					insrepo.save(ins);
+					instii=antigua.get();
+					instii=ins;
 				}else {
 					log.info("no fue posible editar la institucion");
 					throw f;

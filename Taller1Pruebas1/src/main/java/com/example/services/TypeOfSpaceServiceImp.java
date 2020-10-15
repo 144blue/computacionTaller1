@@ -34,7 +34,9 @@ public class TypeOfSpaceServiceImp implements TypeOfSpaceService{
 			Optional<Institution> inst= insRepo.findById(PSType.getInstitution().getInstId());
 			
 			if(inst!=null) {
+				
 				if (PSType.getPhyspctypeName()!=null) {
+					System.out.println("enter");
 					TypeRepo.save(PSType);
 				}else {
 					log.info("no fue posible guardar el tipo de espacio, no tiene nombre");
@@ -55,13 +57,18 @@ public class TypeOfSpaceServiceImp implements TypeOfSpaceService{
 		
 		ServiceImpException f=new ServiceImpException();
 		
+			Physicalspacetype phy;
 			Optional<Physicalspacetype> old= TypeRepo.findById(PSType.getPhyspctypeId());
 			Optional<Institution> inst= insRepo.findById(PSType.getInstitution().getInstId());
 			
 			if (old!=null) {
 				if (inst != null) {
 					if (PSType.getPhyspctypeName() != null) {
-						TypeRepo.save(PSType);
+																
+						phy=old.get();
+						phy=PSType;
+						
+						
 					} else {
 						log.info("no fue posible actualizar el tipo de espacio, no tiene nombre");
 						throw f;

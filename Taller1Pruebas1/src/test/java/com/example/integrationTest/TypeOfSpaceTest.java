@@ -34,7 +34,9 @@ class TypeOfSpaceTest {
 	@BeforeEach
 	private void setup() {
 		
-		MockitoAnnotations.initMocks(this);
+		
+		
+		
 		ins=new Institution();
 		long idInstitution=2;
 		ins.setInstId(idInstitution);
@@ -56,12 +58,12 @@ class TypeOfSpaceTest {
 			tser.savePhysicalspacetype(pSpace);
 		
 		}catch (Exception e) {
-			
-			assertTrue(false);
+			e.printStackTrace();
+			fail();
 		}	
 	}
 	
-	
+	     
 
 	@Test
 	public void editTypeOfSpaceTest() {
@@ -74,7 +76,7 @@ class TypeOfSpaceTest {
 		
 		}catch (Exception e) {
 			
-			assertTrue(true);
+			fail();
 		}	
 	}
 	

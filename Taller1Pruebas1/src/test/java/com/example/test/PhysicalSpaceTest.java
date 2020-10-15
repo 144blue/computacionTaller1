@@ -61,6 +61,7 @@ class PhysicalSpaceTest {
 		when(tRepo.findById(pType.getPhyspctypeId())).thenReturn(ptypeOP);	
 		
 		try {
+			
 			pSer.savePhysicSpace(pSpace);
 		
 		}catch (Exception e) {
