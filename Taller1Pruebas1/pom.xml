@@ -9,8 +9,8 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>Taller1Pruebas1</artifactId>
+	<groupId>Huertas</groupId>
+	<artifactId>HuertasDavid</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Taller1Pruebas1</name>
 	<description>taller</description>
